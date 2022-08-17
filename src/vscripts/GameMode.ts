@@ -2,8 +2,6 @@ import { reloadable } from './lib/tstl-utils';
 import { modifier_panic } from './modifiers/modifier_panic';
 import { GlobalFunctions } from './utils/GlobalFunctions';
 
-const heroSelectionTime = 20;
-
 declare global {
   interface CDOTAGameRules {
     Addon: GameMode;
@@ -67,11 +65,10 @@ export class GameMode {
   }
 
   private configure(): void {
-    GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.GOODGUYS, 3);
-    GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.BADGUYS, 3);
+    GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.GOODGUYS, 2);
 
     GameRules.SetShowcaseTime(0);
-    GameRules.SetHeroSelectionTime(heroSelectionTime);
+    GameRules.SetHeroSelectionTime(20);
   }
 
   public OnStateChange(): void {
