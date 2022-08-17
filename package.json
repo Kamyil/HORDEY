@@ -1,5 +1,5 @@
 {
-    "name": "",
+    "name": "hordey",
     "private": true,
     "scripts": {
         "postinstall": "node scripts/install.js",
@@ -19,5 +19,9 @@
         "npm-run-all": "^4.1.5",
         "typescript": "^4.7.4",
         "typescript-to-lua": "^1.7.1"
+    },
+    "dependencies": {
+        "react": "^17.0.2",
+        "react-panorama": "^0.1.2"
     }
 }
